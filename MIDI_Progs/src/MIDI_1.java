@@ -41,4 +41,11 @@ public class MIDI_1 {
             }
     }
 
+
+    /*
+    ShortMessage a = new ShortMessage();
+    a.setMessage(144,1, 44, 100);
+    MidiEvent noteOn = new MidiEvent(a, 1);
+    track.add(noteOn);
+     */
 }
