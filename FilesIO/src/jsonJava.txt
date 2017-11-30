@@ -1,0 +1,19 @@
+JSONParser parser = new JSONParser();
+JSONArray a = (JSONArray)parser.parse(new FileReader(path));
+ 
+//Now we will loop through the array 'a' to get the JSON elements.
+
+while(Object o: a){
+	JSONObject obj = (JSONObject)o;
+	String name = obj.get("name");
+	String city = obj.get("city");
+	
+	//Now we will loop through the array cars.
+
+	JSONArray cars = (JSONArray)obj.get("cars");
+	Iterator<String> itr = cars.iterator();
+
+	while(itr.hasNext()){
+		syso(itr.next());
+	}
+}
